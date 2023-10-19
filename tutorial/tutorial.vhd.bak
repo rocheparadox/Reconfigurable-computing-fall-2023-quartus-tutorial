@@ -1,0 +1,20 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity tutorial is
+port(
+	input1: in std_logic_vector(3 downto 0);
+	input2: in std_logic_vector(3 downto 0);
+	output: out std_logic_vector(3 downto 0);
+	overflow: out std_logic
+);
+end entity;
+
+architecture arch of tutorial is
+	begin
+	process(input1, input2)
+	begin
+		output <= input1 + input2;
+	end process;
+end architecture;
+
